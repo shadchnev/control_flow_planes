@@ -24,7 +24,7 @@ DEFAULT_CAPACITY = 50
 	end
 
 	def full?
-		@capacity = plane_count
+		@capacity == plane_count
 	end
  	
 end 	
