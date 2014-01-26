@@ -1,4 +1,4 @@
-require_relative "../lib/plane.rb"
+require_relative "../lib/plane"
 
 describe Plane do 
 

@@ -4,7 +4,7 @@ require './lib/plane'
 describe Airport do
 
 	let(:plane) {Plane.new}
-	let(:airport) {Airport.new(:capacity => 20)}
+	let(:airport) {Airport.new(:capacity => 100)}
 
  it "should accept a plane" do
  	  expect(airport.plane_count).to eq(0)
@@ -28,16 +28,13 @@ describe Airport do
  		airport.dock(plane)
  		expect(airport.plane_count).to eq(1)
 		expect(airport).not_to be_stormy_weather
-		expect(airport.plane_count).to eq(plane)
-
+		expect(airport.plane_count).to eq(1)
  	end
 
  	it "should know when is full" do
  		expect(airport).not_to be_full
- 		20.times{airport.dock(plane.new)}
+ 		100.times{airport.dock(Plane.new)}
  		expect(airport).to be_full
  	end
-
-
 
 end
