@@ -12,6 +12,8 @@ DEFAULT_CAPACITY = 50
 	end
 
 	def dock(plane)
+		raise "No plane should land" if stormy_weather?
+		raise "Airport is full" if full?
 		@planes << plane
 	end
 
@@ -20,11 +22,15 @@ DEFAULT_CAPACITY = 50
 	end
 
 	def take_off(plane)	
+		raise "No plane should take off" if stormy_weather?
 		@planes.delete(plane)
 	end
 
 	def full?
 		@capacity == plane_count
+	end
+
+	def flying(plane)
 	end
  	
 end 	

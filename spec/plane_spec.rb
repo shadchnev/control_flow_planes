@@ -1,11 +1,16 @@
 require_relative "../lib/plane"
 
-describe Plane do 
+describe Plane do
 
-	it "should not be broken when we created" do
-		plane = Plane.new
-		expect(plane).not_to be_broken
+	let(:plane) {Plane.new}
+
+	it "should have a landed status" do 
+		expect(plane).not_to be_flying
 	end
 
+	it "should have a flying status" do
+		plane.landed
+		expect(plane).to be_flying
+	end
 	
 end

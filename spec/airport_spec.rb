@@ -17,7 +17,7 @@ describe Airport do
  		expect(airport).not_to be_stormy_weather
  	end
 
- 	it "it should let a plane take off" do
+ 	it "should let a plane take off" do
  		airport.dock(plane)
  		expect(airport.plane_count).to eq(1)
  		airport.take_off(plane)
@@ -35,6 +35,9 @@ describe Airport do
  		expect(airport).not_to be_full
  		100.times{airport.dock(Plane.new)}
  		expect(airport).to be_full
+ 	end
+
+ 	it "should know when a plane is flying" do
  	end
 
 end

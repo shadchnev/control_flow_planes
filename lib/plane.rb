@@ -1,6 +1,15 @@
 class Plane
-	def broken?
-		@broken
+
+	def initialize
+
+	end
+
+	def flying?
+		@flying 
+	end
+
+	def landed
+		@flying = true
 	end
 	
 end
