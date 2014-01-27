@@ -24,6 +24,9 @@ describe Airport do
  		expect(airport.plane_count).to eq(0)
  	end
 
+  # This test is wrong. You dock a plane, check that it happens,
+  # then check that the weather is ok and that we still have one plane.
+  # Of course we have, why would it disappear if you don't tell it to take off?
  	it "should NOT let a plane take off when weather stormy" do
  		airport.dock(plane)
  		expect(airport.plane_count).to eq(1)

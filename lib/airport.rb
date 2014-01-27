@@ -4,7 +4,7 @@ DEFAULT_CAPACITY = 50
 
 	def initialize(options ={})
 		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-		@planes = [ ]
+		@planes = []
 	end
 
 	def plane_count
@@ -30,6 +30,7 @@ DEFAULT_CAPACITY = 50
 		@capacity == plane_count
 	end
 
+	# why would the airport check that a plane is flying?
 	def flying(plane)
 	end
  	
